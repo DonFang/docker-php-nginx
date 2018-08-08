@@ -116,7 +116,7 @@ RUN set -eux; \
     \
     phpize; \
     ./configure --with-php-config=/usr/local/bin/php-config; \
-    sed -i 's|#define CAKEY .*|#define CAKEY "LKtriKZgJPzxd405rKWu3dlFkDfZmUrp"|' php_screw_plus.h; \
+    sed -i 's|#define CAKEY .*|#define CAKEY "LKtriKZgJPzxd405rKWu3dlFkDfZmUrp”|’ php_screw_plus.h; \
     make -j "$(nproc)"; \
     make install; \
     echo extension=php_screw_plus.so > /usr/local/etc/php/conf.d/docker-php-ext-screw-plus.ini; \
